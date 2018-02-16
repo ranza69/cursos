@@ -1,10 +1,10 @@
 # --> BUILD
 FROM openjdk:8-jdk-alpine
-WORKDIR /opt
 RUN apk update
 RUN apk add maven
 RUN apk add git
 RUN mvn package
+RUN pwd
 
 # --> RUN
 FROM openjdk:8-jre-alpine
