@@ -3,8 +3,9 @@ FROM openjdk:8-jdk-alpine
 RUN apk update
 RUN apk add maven
 RUN apk add git
-RUN mvn package
 RUN pwd
+RUN ls
+RUN mvn package
 
 # --> RUN
 FROM openjdk:8-jre-alpine
